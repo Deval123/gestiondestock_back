@@ -18,7 +18,7 @@ http://localhost:8081/swagger-ui/index.html#/article-controller (lien vers swagg
 to check against
 https://www.marcobehler.com/guides/spring-security
 
-Le reste à faire pour l'API Gestion De Stock
+Le reste à faire pour l'API Gestion De Stock. Just want to see
 
 Done 
 x Todo
