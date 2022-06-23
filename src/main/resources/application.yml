@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionstock?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  ## Specify OBMS
+  jpa:
+    ## choix de bd
+    database: MYSQL
+    ## refus de presenter les requêtes lors de l'appel d'un service ou d'une methode
+    show-sql: false
+    generate-ddl: true
+    properties:
+      hibernate:
+        session_factory:
+          interceptor: com.deval.gestiondestock.interceptor.interceptor
+
+    ## hibernate OOL Auto (create, create-drop, update) quoi faire lors du lancement ou demarage
+        ddl-auto: create
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8081
+
+flickr:
+  apiKey: 7e5586cf43eb80763146da58f470ac53
+  apiSecret: 402a78af4d1fd82a
+  appKey: 72157720843843688-f59eb582637e6ff1
+  appSecret: 72157720843843688-f59eb582637e6ff1
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
